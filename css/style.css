@@ -56,23 +56,56 @@ ul{
     line-height: 59px;
 }
 .main-bg{
-    padding: .5rem 2.5rem;
+    padding: .5rem 0rem;
 }
 .main-container{
     border-top: 2px solid blue;
     border-bottom: 2px solid blue;
-    padding: 3.75rem 2rem;
+    padding: 2rem 2rem;
     align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
 }
 .text > p{
-    padding: 1rem 0rem;
+    padding: .7rem 0rem;
     max-width: 37ch;
     font-size: 1.25rem;
     color: #7c7c7c;
 }
-
+.produtos-container{
+    align-items: flex-start;
+    flex-direction: column;
+}
+.produtos-container > h2{
+    padding: 2rem 0rem;
+}
+.cards{
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+}
+[class^=card]{
+    width: 100%;
+    align-items: flex-end;
+}
+[class^=card] > h2{
+    color: #a4a4a4;
+    font-size: 3rem;
+    background-color: #f7f7f7;
+    padding: 3.75rem 1.25rem;
+}
+[class^=card] > img{
+    width: 100%;
+}
+.card-purple{
+    border-top: .5rem solid #ae81ff;
+}
+.card-pink{
+    border-top: .5rem solid #f9265e;
+}
+.card-blue{
+    border-top: .5rem solid #66d9eb;
+}
 
 @media (max-width: 800px){
     [class$=container]{
@@ -81,6 +114,7 @@ ul{
     }
     .main-container{
         flex-wrap: wrap;
+        padding: 2rem .7rem;
         gap: 1rem;
     }
     .main-container > img{
@@ -91,5 +125,20 @@ ul{
     }
     .text > p{
         max-width: 1000%;
+    }
+    [class^=card]{
+        flex-wrap: wrap;
+    }
+    .card-purple, .card-pink{
+        width: 48.9%;
+    }
+}
+
+@media (max-width: 425px){
+    [class^=card]{
+        flex-wrap: wrap;
+    }
+    .card-purple, .card-pink{
+        width: 100%;
     }
 }
